@@ -1,17 +1,21 @@
 using System.Numerics;
 using GraphQL.Types;
+using UptownShopper_GraphQL.Data;
+using UptownShopper_GraphQL.Entities;
 
 namespace UptownShopper_GraphQL.GraphQL
 {
-  public class StoreInputType : InputObjectGraphType
+  public class StoreItemType : ObjectGraphType<StoreItem> 
   {
-    public StoreInputType()
+    public StoreItemType(IDataStore dataStore)
     {
-      Name = "StoreInput";
-      Field<NonNullGraphType<StringGraphType>>("name");
-      Field<NonNullGraphType<BooleanGraphType>>("location");
-      Field<NonNullGraphType<StringGraphType>>("category");
-      Field<NonNullGraphType<IntGraphType>>("itemId");
+      Field(i => i.ItemId);      
+
+      Field<ItemType, Item>().Name("Item").ResolveAsync(ctx => dataStore.GetItemByIdAsync(ctx.Source.ItemId));         
+
+      Field(s => s.StoreId);
+
+      Field<StoreType, Store>().Name("Store").ResolveAsync(ctx => dataStore.GetStoreByIdAsync(ctx.Source.StoreId));
     }
   }
 }

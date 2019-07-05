@@ -1,13 +1,16 @@
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace UptownShopper_GraphQL.Entities
 {
+  [Table("Store", Schema = "dbo")]
   public class Store
   {
-    public long StoreId { get; set; }
+    public int StoreId { get; set; }
     public string Name { get; set; }
     public string Location { get; set; }
     public string Category { get; set; }
 
-    public Item Item { get; set; }
-    public long ItemId { get; set; }
+    public IEnumerable<StoreItem> StoreItems { get; set; }
   }
 }

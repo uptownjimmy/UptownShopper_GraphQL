@@ -1,12 +1,14 @@
+using GraphQL;
 using GraphQL.Types;
 
 namespace UptownShopper_GraphQL.GraphQL
 {
-  public class HelloWorldSchema : Schema
+  public class ItemSchema : Schema
   {
-    public HelloWorldSchema(HelloWorldQuery query)
+    public ItemSchema(IDependencyResolver resolver) : base(resolver)
     {
-      Query = query;
+      Query = resolver.Resolve <ItemQuery> ();
+      Mutation = resolver.Resolve <ItemMutation> ();
     }
   }
 }

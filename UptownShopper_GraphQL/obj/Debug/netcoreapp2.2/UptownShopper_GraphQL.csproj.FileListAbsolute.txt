@@ -1,0 +1,14 @@
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/bin/Debug/netcoreapp2.2/UptownShopper_GraphQL.deps.json
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/bin/Debug/netcoreapp2.2/UptownShopper_GraphQL.runtimeconfig.json
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/bin/Debug/netcoreapp2.2/UptownShopper_GraphQL.runtimeconfig.dev.json
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/bin/Debug/netcoreapp2.2/UptownShopper_GraphQL.dll
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/bin/Debug/netcoreapp2.2/UptownShopper_GraphQL.pdb
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.csprojAssemblyReference.cache
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.csproj.CoreCompileInputs.cache
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.RazorAssemblyInfo.cache
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.RazorAssemblyInfo.cs
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.AssemblyInfoInputs.cache
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.AssemblyInfo.cs
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.RazorTargetAssemblyInfo.cache
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.dll
+/Users/uptownjimmy/Dropbox/uJ/NET/UptownShopper_GraphQL/UptownShopper_GraphQL/obj/Debug/netcoreapp2.2/UptownShopper_GraphQL.pdb
