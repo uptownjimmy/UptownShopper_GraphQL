@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UptownShopper_GraphQL.Entities;
 
@@ -13,7 +14,7 @@ namespace UptownShopper_GraphQL.Data
     Task<IDictionary<int, Item>> GetItemsByIdAsync(IEnumerable<int> itemIds, CancellationToken token);
     Task<IEnumerable<Item>> GetItemsAsync();
     Task<Item> CreateItemAsync(Item item);
-    
+    Item UpdateItem(int itemId, Item item);
     
     Task<StoreItem> GetStoreItemByIdAsync(int storeItemId);
     Task<Store> GetStoreByIdAsync(int storeId);
@@ -53,6 +54,22 @@ namespace UptownShopper_GraphQL.Data
       var addedItem = await _applicationDbContext.Item.AddAsync(item);
       await _applicationDbContext.SaveChangesAsync();
       return addedItem.Entity;
+    }
+
+    public Item UpdateItem(int itemId, Item item)
+    {
+      var updatedItem = _applicationDbContext.Item.SingleOrDefault(i => i.ItemId == itemId);
+      
+      if (updatedItem != null)
+      {
+        updatedItem.Name = item.Name;
+        updatedItem.Category = item.Category;
+        updatedItem.Active = item.Active;
+        updatedItem.Notes = item.Notes;
+        _applicationDbContext.SaveChanges();
+      }
+
+      return updatedItem;
     }
     
     
