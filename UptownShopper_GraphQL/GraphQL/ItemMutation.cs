@@ -28,6 +28,20 @@ namespace UptownShopper_GraphQL.GraphQL
           return dataStore.UpdateItem(itemId, item);
         });
       
+      Field<ItemType, Item>()
+        .Name("deleteItem")
+        .Argument<NonNullGraphType<ItemInputType>>("item", "item input")
+        .Resolve(ctx =>
+        {
+          var item = ctx.GetArgument<Item>("item");
+          dataStore.DeleteItemAsync(item);
+          return item;  
+        });
+      
+      
+      
+      
+      
       Field<StoreType, Store>()
         .Name("createStore")
         .Argument<NonNullGraphType<StoreInputType>>("store", "store input")

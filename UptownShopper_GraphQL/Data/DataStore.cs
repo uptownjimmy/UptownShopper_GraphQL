@@ -15,6 +15,7 @@ namespace UptownShopper_GraphQL.Data
     Task<IEnumerable<Item>> GetItemsAsync();
     Task<Item> CreateItemAsync(Item item);
     Item UpdateItem(int itemId, Item item);
+    int DeleteItemAsync(Item item);
     
     Task<StoreItem> GetStoreItemByIdAsync(int storeItemId);
     Task<Store> GetStoreByIdAsync(int storeId);
@@ -72,7 +73,18 @@ namespace UptownShopper_GraphQL.Data
       return updatedItem;
     }
     
-    
+    public int DeleteItemAsync(Item item)  
+    {
+      var deletedItem = _applicationDbContext.Item.SingleOrDefault(i => i.ItemId == item.ItemId);
+
+      if (deletedItem != null)
+      {
+        _applicationDbContext.Remove(deletedItem);
+        _applicationDbContext.SaveChanges();
+      }
+
+      return item.ItemId;
+    }
     
     
     

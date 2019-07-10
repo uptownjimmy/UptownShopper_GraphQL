@@ -7,6 +7,7 @@ namespace UptownShopper_GraphQL.GraphQL
     public ItemInputType()
     {
       Name = "ItemInput";
+      Field<NonNullGraphType<IdGraphType>>("itemId");
       Field<NonNullGraphType<StringGraphType>>("name");
       Field<NonNullGraphType<StringGraphType>>("category");
       Field<NonNullGraphType<BooleanGraphType>>("active");
