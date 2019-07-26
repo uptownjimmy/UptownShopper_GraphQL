@@ -14,7 +14,8 @@ namespace UptownShopper_GraphQL.Data
     Task<IDictionary<int, Item>> GetItemsByIdAsync(IEnumerable<int> itemIds, CancellationToken token);
     Task<IEnumerable<Item>> GetItemsAsync();
     Task<Item> CreateItemAsync(Item item);
-    Item UpdateItem(int itemId, Item item);
+//    Item UpdateItem(int itemId, Item item);
+    Item UpdateItem(Item item);
     int DeleteItemAsync(Item item);
     
     Task<StoreItem> GetStoreItemByIdAsync(int storeItemId);
@@ -57,9 +58,25 @@ namespace UptownShopper_GraphQL.Data
       return addedItem.Entity;
     }
 
-    public Item UpdateItem(int itemId, Item item)
+//    public Item UpdateItem(int itemId, Item item)
+//    {
+//      var updatedItem = _applicationDbContext.Item.SingleOrDefault(i => i.ItemId == itemId);
+//      
+//      if (updatedItem != null)
+//      {
+//        updatedItem.Name = item.Name;
+//        updatedItem.Category = item.Category;
+//        updatedItem.Active = item.Active;
+//        updatedItem.Notes = item.Notes;
+//        _applicationDbContext.SaveChanges();
+//      }
+//
+//      return updatedItem;
+//    }
+    
+    public Item UpdateItem(Item item)
     {
-      var updatedItem = _applicationDbContext.Item.SingleOrDefault(i => i.ItemId == itemId);
+      var updatedItem = _applicationDbContext.Item.SingleOrDefault(i => i.ItemId == item.ItemId);
       
       if (updatedItem != null)
       {

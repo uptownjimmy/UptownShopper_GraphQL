@@ -19,13 +19,14 @@ namespace UptownShopper_GraphQL.GraphQL
       
       Field<ItemType, Item>()
         .Name("updateItem")
-        .Argument<NonNullGraphType<IntGraphType>>("itemId", "itemId input")
+//        .Argument<NonNullGraphType<IntGraphType>>("itemId", "itemId input")
         .Argument<NonNullGraphType<ItemInputType>>("item", "item input")
         .Resolve(ctx =>
         {
-          var itemId = ctx.GetArgument<int>("itemId");
+//          var itemId = ctx.GetArgument<int>("itemId");
           var item = ctx.GetArgument<Item>("item");
-          return dataStore.UpdateItem(itemId, item);
+//          return dataStore.UpdateItem(itemId, item);
+          return dataStore.UpdateItem(item);
         });
       
       Field<ItemType, Item>()

@@ -7,7 +7,7 @@ namespace UptownShopper_GraphQL.GraphQL
     public ItemInputType()
     {
       Name = "ItemInput";
-      Field<NonNullGraphType<IdGraphType>>("itemId");
+      Field<IdGraphType>("itemId"); // this is necessary for delete, but farts on create and update
       Field<NonNullGraphType<StringGraphType>>("name");
       Field<NonNullGraphType<StringGraphType>>("category");
       Field<NonNullGraphType<BooleanGraphType>>("active");
